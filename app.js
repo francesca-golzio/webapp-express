@@ -3,9 +3,14 @@ const app = express();
 require('dotenv').config();
 const port = process.env.PORT || 3000;
 const moviesRouter = require('./routers/moviesRouter');
+const cors = require('cors');
 
 /* Middleware file statici */
 app.use(express.static('public'));
+/* Middleware for body parser */
+app.use(express.json());
+/* Middleware CORS */
+app.use(cors());
 
 /* SERVER (INDEX) */
 app.get('/', (req, res) => {
