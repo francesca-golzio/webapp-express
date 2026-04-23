@@ -1,4 +1,4 @@
-20-21 / 04 / 26  -  esercizio di oggi:
+20-22-23 / 04 / 26  -  esercizio di oggi:
 # Setup Web App Express
 
 repo: `webapp-express`
@@ -13,6 +13,15 @@ Ciao classe, è ora di mettere alla prova le vostre conoscenze iniziando a costr
 ✅- Prepariamo **una rotta index** per ottenere la lista dei film
 ✅- Prepariamo **una rotta show** per ottenere i dettagli di un singolo film e le sue recensioni
 
+## Esercizio giorno 2
+✅- Configuriamo l'app di backend a ricevere chiamate dalla nostra applicazione React (repo `webapp-react`), installando e impostando il middleware **CORS**
+✅- Proviamo quindi ad effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei libri
+
+## Esercizio giorno 3
+
+- Predisponiamo un’API per **salvare nel database** una nuova recensione legata ad un film
+- Testiamola su postman e verifichiamo che nel DB venga effettivamente inserita una nuova recensione
+
 ## Bonus
 
 ✅- Inserire le immagini nel progetto express
@@ -21,7 +30,3 @@ Ciao classe, è ora di mettere alla prova le vostre conoscenze iniziando a costr
 ✅- Inserire le vostre rotte in un router
 - Inserire un middleware per le rotte inesistenti
 - Inserire un middleware per la gestione errori
-
-## Esercizio giorno 2
-✅- Configuriamo l'app di backend a ricevere chiamate dalla nostra applicazione React (repo `webapp-react`), installando e impostando il middleware **CORS**
-✅- Proviamo quindi ad effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei libri
