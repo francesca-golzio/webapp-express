@@ -54,7 +54,36 @@ const show = (req, res) => {
 
 };
 
-  module.exports = {
-    index,
-    show
+/* CREATE */
+const create = (req, res) => {
+
+  const movieId = req.params.id;
+  const { name, vote, text } = req.body;
+  console.log(req?.body);
+  
+  const sql = 'INSERT INTO reviews (movie_id, name, vote, `text`) VALUES (?, ?, ?, ?)';
+
+  connection.query(sql, [movieId, name, vote, text], (err, results) => {
+
+  if (err) {
+    console.error('Error creating review:', err);
+    return res.status(500).json({ error: 'Internal Server Error', message: 'An unexpected error occurred. Please try again later.' });
   };
+
+  /* Just in case, this should not happen */
+  if (results.affectedRows === 0) {
+    return res.status(404).json({ error: 'Movie not found', message: 'The requested movie was not found.' });
+  };
+
+  res.status(201).json({ message: 'Review created successfully.' });
+
+});
+};
+
+
+
+module.exports = {
+  index,
+  show,
+  create
+};

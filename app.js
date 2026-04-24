@@ -7,14 +7,14 @@ const port = process.env.PORT || 3000; //🤔 import.meta.env
 const cors = require('cors');
 app.use(cors());
 
-/* Movies Router */
-const moviesRouter = require('./routers/moviesRouter');
-app.use('/movies', moviesRouter);
-
 /* Middleware file statici */
 app.use(express.static('public'));
 /* Middleware for body parser */
 app.use(express.json());
+
+/* Movies Router */
+const moviesRouter = require('./routers/moviesRouter');
+app.use('/movies', moviesRouter);
 
 /* SERVER (INDEX) */
 app.get('/', (req, res) => {

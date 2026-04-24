@@ -9,5 +9,7 @@ moviesRouter.get('/', moviesController.index);
 /* SHOW */
 moviesRouter.get('/:id', moviesController.show);
 
+/* CREATE  */
+moviesRouter.post('/:id', moviesController.create);
 
 module.exports = moviesRouter;
