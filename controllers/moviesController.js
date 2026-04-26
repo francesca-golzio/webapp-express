@@ -54,10 +54,10 @@ const show = (req, res) => {
 
 };
 
-/* CREATE */
-const create = (req, res) => {
+/* STORE REVIEW (CREATE) */
+const storeReview = (req, res) => {
 
-  const movieId = req.params.id;
+  const movieId = parseInt(Number(req.params.id));
   const { name, vote, text } = req.body;
   console.log(req?.body);
   
@@ -85,5 +85,5 @@ const create = (req, res) => {
 module.exports = {
   index,
   show,
-  create
+  storeReview
 };
