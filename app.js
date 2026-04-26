@@ -14,7 +14,7 @@ app.use(express.json());
 
 /* Movies Router */
 const moviesRouter = require('./routers/moviesRouter');
-app.use('/movies', moviesRouter);
+app.use('/api/movies', moviesRouter);
 
 /* SERVER (INDEX) */
 app.get('/', (req, res) => {
