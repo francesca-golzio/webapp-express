@@ -15,7 +15,7 @@ connection.connect((err) => {
       message: err.message
     });
   }
-  console.log('Connected to MSQL!');
+  console.log('Connected to MYSQL!');
 });
 
 module.exports = connection;
